@@ -594,9 +594,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 112.0 }
   #else
 
-    #define DEFAULT_Kp 19.10
-    #define DEFAULT_Ki 1.56
-    #define DEFAULT_Kd 58.45
+    #define DEFAULT_Kp 13.69
+    #define DEFAULT_Ki 0.77
+    #define DEFAULT_Kd 61.05
   #endif
 #endif // PIDTEMP
 
@@ -1016,7 +1016,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 1000, 1000 }
+#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 5000, 1000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1031,9 +1031,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          3500    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   3500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1046,7 +1046,7 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 10.0
+  #define DEFAULT_XJERK 15.0
   #define DEFAULT_YJERK DEFAULT_XJERK
   #define DEFAULT_ZJERK DEFAULT_XJERK // Must be same as XY for delta
   //#define DEFAULT_IJERK  0.3
@@ -1998,7 +1998,7 @@
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
-  #define NOZZLE_PARK_POINT { 0, 0, 80 }
+  #define NOZZLE_PARK_POINT { -80, 0, 80 }
   //#define NOZZLE_PARK_X_ONLY          // X move only is required to park
   //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
   #define NOZZLE_PARK_Z_RAISE_MIN   10   // (mm) Always raise Z by at least this distance
