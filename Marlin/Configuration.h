@@ -680,9 +680,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 112.0 }
   #else
 
-    #define DEFAULT_Kp 10.28
-    #define DEFAULT_Ki 0.58
-    #define DEFAULT_Kd 45.74
+    #define DEFAULT_Kp 13.69
+    #define DEFAULT_Ki 0.77
+    #define DEFAULT_Kd 61.05
   #endif
 #endif
 
@@ -764,9 +764,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
 
-  #define DEFAULT_bedKp 17.83
-  #define DEFAULT_bedKi 1.66
-  #define DEFAULT_bedKd 127.67
+  #define DEFAULT_bedKp 45.29
+  #define DEFAULT_bedKi 8.71
+  #define DEFAULT_bedKd 156.99
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1188,7 +1188,7 @@
 #define XYZ_PULLEY_TEETH 20
 
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 275.21 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 137.6 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1589,7 +1589,7 @@
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -40
+#define Z_PROBE_OFFSET_RANGE_MIN -50
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
@@ -1622,7 +1622,7 @@
 #define PREHEAT_BEFORE_PROBING
 #if ENABLED(PREHEAT_BEFORE_PROBING)
   //#define PROBING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
-  #define PROBING_BED_TEMP     60
+  #define PROBING_BED_TEMP     65
 #endif
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
@@ -1674,7 +1674,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
